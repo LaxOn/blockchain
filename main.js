@@ -55,5 +55,9 @@ laxCoin.addBlock(new Block(1, "01/08/2019"), { amount: 4 });
 laxCoin.addBlock(new Block(2, "08/08/2019"), { amount: 10 });
 
 console.log("Is blockchain valid? " + laxCoin.isChainValid())
+laxCoin.chain[1].data = {amount: 100};
+console.log("Is blockchain valid? " + laxCoin.isChainValid())
+laxCoin.chain[1].hash = laxCoin.chain[1].calculateHash();
+console.log("Is blockchain valid? " + laxCoin.isChainValid())
 
 // console.log(JSON.stringify(laxCoin, null, 4));
